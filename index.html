@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Patient Management System</h1>
+        <nav>
+            <button id="loginBtn">Login</button>
+            <button id="registerBtn">Register Patient</button>
+            <button id="appointmentBtn">Book Appointment</button>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="loginSection" class="hidden">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+        
+        <section id="registerSection" class="hidden">
+            <h2>Register Patient</h2>
+            <form id="registerForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" required>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+        
+        <section id="appointmentSection" class="hidden">
+            <h2>Book Appointment</h2>
+            <form id="appointmentForm">
+                <label for="patientId">Patient ID:</label>
+                <input type="text" id="patientId" required>
+                <label for="doctor">Doctor:</label>
+                <select id="doctor" required>
+                    <option value="">Select Doctor</option>
+                    <option value="dr1">Dr. Smith (Cardiology)</option>
+                    <option value="dr2">Dr. Johnson (Dermatology)</option>
+                </select>
+                <label for="dateTime">Date & Time:</label>
+                <input type="datetime-local" id="dateTime" required>
+                <button type="submit">Book</button>
+            </form>
+        </section>
+        
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <p>Welcome! Select an option from the menu.</p>
+            <div id="output"></div>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
